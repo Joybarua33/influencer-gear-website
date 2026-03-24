@@ -76,16 +76,20 @@ body{
 
 /* sponsor related style */
 .our-sponsor{
-  max-width: 1110px;
+  max-width: 1200px;
   margin: 0 auto;
   margin-top: 100px;
 }
 .sponsor-companies{
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+}
+.sponsor-companies img{
+  width: 84px;
+  margin-right: 100px;
 }
 
-/* Collection related style*/
 .popular-collection{
   max-width: 1147px;
   margin: 0 auto;
@@ -133,12 +137,12 @@ body{
 
 /* feature related style */
 .feature{
-  width: 1200px;
+  width: 1110px;
   margin: 0 auto;
   margin-top: 100px;
-  border: 1px solid pink;
 }
 .feature-content{
+  max-width: 610px;
   margin-left: 100px;
 }
 .feature-img, img{
@@ -163,6 +167,20 @@ body{
   border: none;
 }
 
+footer{
+  margin-top: 100px;
+  background: black;
+}
+
+.footer-section{
+  text-align: center;
+  color: white;
+  padding: 50px 0px;
+}
+.footer-social-media a{
+  margin-right: 10px;
+  color: white;
+}
 @media screen and (max-width : 576px) {
   .navbar, .nav-links, .banner{
     flex-direction: column;
@@ -175,14 +193,15 @@ body{
   .nav-item{
     margin-top: 10px;
   }
+  .banner-img img{
+    width: 400px;
+    margin-top: 50px;
+  }
   .banner{
     flex-direction: column-reverse;
   }
-  .banner-img{
-    margin-top: 50px;
-  }
   .sponsor-companies{
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .sponsor-companies img{
     margin-bottom: 50px;
@@ -194,10 +213,16 @@ body{
     text-align: center;
   }
   .feature{
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
-  .feature-img img{
-    width: 100%;
+  .feature-img{
+    width: 400px;
+    margin-top: 20px;
+  }
+  .feature-content{
+    margin-left: 0;
+    max-width: 400px;
+    text-align: center;
   }
 }
 
@@ -208,7 +233,28 @@ body{
   .banner{
     padding: 0px 10px;
   }
+  .sponsor-companies{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sponsor-companies img{
+    margin-bottom: 50px;
+  }
   .popular-items{
     grid-template-columns: repeat(2, 1fr);
+  }
+  .see-more{
+    text-align: center;
+  }
+  .feature-img{
+    width: 400px;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .feature{
+    flex-direction: column-reverse;
+  }
+  .feature-content{
+    margin-left: 10px;
+    text-align: center;
   }
 }
