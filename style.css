@@ -19,9 +19,9 @@ body{
 
 /* Header Style */
 .navbar{
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 50px 0;
+  padding: 50px 200px;
 }
 .brand{
   font-size: 1.25rem;
@@ -38,20 +38,21 @@ body{
 }
 
 .banner{
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 120px;
+  padding: 0 200px;
 }
 .banner-content{
   max-width: 582px;
 }
 .banner-img{
-  max-width: 440px;
+  max-width: 540px;
   background-image: url("images/Circle\ design.svg");
+  background-position: center;
+  background-size: cover;
 }
-.banner-img img{
-  width: 100%;
-}
+
+
 .banner-title{
   font-size: 3.25rem;
   font-weight: bold;
@@ -71,14 +72,13 @@ body{
   font-weight: 600;
 }
 
-main{
-  margin-top: 100px;
-}
+
 
 /* sponsor related style */
 .our-sponsor{
   max-width: 1110px;
   margin: 0 auto;
+  margin-top: 100px;
 }
 .sponsor-companies{
   display: grid;
@@ -86,3 +86,82 @@ main{
 }
 
 /* Collection related style*/
+.popular-collection{
+  max-width: 1147px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.popular-items{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.popular-item img{
+  width: 100%;
+}
+.popular-item{
+  width: 329px;
+  padding: 15px;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+}
+
+.item-title{
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 40px;
+  color: rgba(24, 25, 31, 1);
+  margin: 10px 0px;
+}
+.item-cast{
+  font-size: 1.5rem;
+  margin: 0px 0px;
+}
+.item-des{
+  color: rgba(120, 120, 133, 1);
+  font-weight: bold;
+}
+
+
+
+
+@media screen and (max-width : 576px) {
+  .navbar, .nav-links, .banner{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar{
+    padding: 0px 0px;
+  }
+  .nav-item{
+    margin-top: 10px;
+  }
+  .banner{
+    flex-direction: column-reverse;
+  }
+  .banner-img{
+    margin-top: 50px;
+  }
+  .sponsor-companies{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sponsor-companies img{
+    margin-bottom: 50px;
+  }
+  .popular-items{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width : 577px) and (max-width : 992px) {
+  .navbar{
+    padding: 50px 10px;
+  }
+  .banner{
+    padding: 0px 10px;
+  }
+  .popular-items{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
